@@ -1,23 +1,53 @@
 {
   "name": "clipkit",
   "version": "1.0.0",
-  "type": "module",
+  "description": "Fast CLIP text/image embedding in Node.js and browser",
   "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "bin": {
-    "clipkit": "./cli/clipkit.ts"
+    "clipkit": "./dist/cli/index.js"
   },
   "scripts": {
     "build": "tsc",
-    "test": "node test/manual/test-text.ts"
+    "prepare": "npm run build",
+    "dev": "ts-node src/test.ts",
+    "test": "node test/test.js"
   },
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "clip",
+    "embedding",
+    "onnx",
+    "clipkit",
+    "openai",
+    "image",
+    "text",
+    "similarity"
+  ],
+  "author": "Divyansh Saraswat",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/divyanshsaraswat/clipkit.git"
+  },
+  "bugs": {
+    "url": "https://github.com/divyanshsaraswat/clipkit/issues"
+  },
+  "homepage": "https://github.com/divyanshsaraswat/clipkit#readme",
   "dependencies": {
     "commander": "^11.0.0",
-    "follow-redirects": "^1.15.9",
-    "onnxruntime-node": "^1.16.3",
-    "sharp": "^0.34.2"
+    "onnxruntime-node": "^1.18.0",
+    "sharp": "^0.33.0"
   },
   "devDependencies": {
-    "@types/follow-redirects": "^1.14.4",
+    "@types/node": "^20.0.0",
+    "ts-node": "^10.9.2",
     "typescript": "^5.4.0"
-  }
+  },
+  "engines": {
+    "node": ">=16"
+  },
+  "type": "module"
 }
