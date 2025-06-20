@@ -1,11 +1,11 @@
 {
-  "name": "clipkit",
+  "name": "clipkit-embeddings",
   "version": "1.0.0",
   "description": "Fast CLIP text/image embedding in Node.js and browser",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "bin": {
-    "clipkit": "./dist/cli/index.js"
+    "clipkit": "./dist/cli/clipkit.js"
   },
   "scripts": {
     "build": "tsc",
