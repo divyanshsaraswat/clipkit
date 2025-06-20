@@ -1,0 +1,23 @@
+{
+  "name": "clipkit",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "clipkit": "./cli/clipkit.ts"
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "node test/manual/test-text.ts"
+  },
+  "dependencies": {
+    "commander": "^11.0.0",
+    "follow-redirects": "^1.15.9",
+    "onnxruntime-node": "^1.16.3",
+    "sharp": "^0.34.2"
+  },
+  "devDependencies": {
+    "@types/follow-redirects": "^1.14.4",
+    "typescript": "^5.4.0"
+  }
+}
